@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at datapath.sv(11): object "hex0" differs only in case from object "Hex0" in the same scope
+Info (10281): Verilog HDL Declaration information at datapath.sv(11): object "hex1" differs only in case from object "Hex1" in the same scope
+Info (10281): Verilog HDL Declaration information at datapath.sv(11): object "hex2" differs only in case from object "Hex2" in the same scope
+Info (10281): Verilog HDL Declaration information at datapath.sv(11): object "hex3" differs only in case from object "Hex3" in the same scope

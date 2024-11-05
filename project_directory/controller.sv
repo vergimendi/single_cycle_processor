@@ -1,0 +1,20 @@
+module controller(input logic[5:0] 	op, funct,
+						input logic			zero,
+						output logic		memtoreg, memwrite,
+						output logic		pcsrc, alusrc,
+						output logic		regdst, regwrite,
+						output logic		jump,
+						output logic[2:0]	alucontrol);
+	// Internal Logic
+	logic[1:0] 	aluop;
+	logic			branch;
+	
+	// Main Decoder Module
+	maindec md(op,memtoreg,memwrite,branch,alusrc,regdst,
+				regwrite,jump,aluop);
+	
+	// ALU Decoder Module
+	aludec ad(funct, aluop, alucontrol);
+	
+	assign pcsrc = branch & zero;
+	endmodule
