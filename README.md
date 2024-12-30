@@ -8,6 +8,15 @@ This project implements a **Single-Cycle MIPS Processor** using **SystemVerilog*
 
 ## Overview
 
+### Schematic
+![schematic](schematic.png)
+
+### RTL
+![rtl](RTL.png)
+
+### Hierarchy
+![h](hierarchy.png)
+
 ### ALU
 The ALU performs arithmetic and logical operations on two 32-bit inputs (A and B) and produces a 32-bit output Y. The operation to perform is determined by the 3-bit control signal F. It supports operations like AND, OR, NOR, addition, subtraction, and set less than.
 
@@ -128,6 +137,8 @@ The datapath connects all the major components of the processor. It includes the
 - **writedata**: Data to be written to memory or register
 - **hex0, hex1, hex2, hex3**: 7-segment display outputs
 
+![datapath](datapath.png)
+
 ### Data Memory
 The data memory module simulates the read and write operations of a memory unit. It stores 64 words, each 32 bits wide.
 
@@ -174,6 +185,8 @@ This is the top-level module that instantiates the controller, datapath, instruc
 - **aluout**: ALU output
 - **writedata**: Data to be written to memory
 - **hex0, hex1, hex2, hex3**: 7-segment display outputs showing results
+  
+![mips](mips.png)
 
 ### 7-Segment Display
 This module converts a 4-bit input value into a 7-segment display encoding. It is used to display 4-bit values from the processor's result on four 7-segment displays.
@@ -198,6 +211,3 @@ The top module connects the processor, instruction memory, and data memory. It h
 1. Compile the design using Altera Quartus II or any compatible FPGA development environment.
 2. Load the design onto the Altera Cyclone IV FPGA board.
 3. Observe the results on the 7-segment displays, which will show the output of the processor's computations.
-
-## Conclusion
-This project implements a single-cycle MIPS processor capable of executing basic instructions. The system is built using SystemVerilog and designed to run on an Altera Cyclone IV FPGA board.
