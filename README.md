@@ -207,7 +207,7 @@ The top module connects the processor, instruction memory, and data memory. It h
 #### Outputs:
 - **hex0, hex1, hex2, hex3**: 7-segment display outputs showing results
 
-## Usage
+## Instructions
 1. Compile the design using Altera Quartus II or any compatible FPGA development environment.
 2. Load the design onto the Altera Cyclone IV FPGA board.
 3. Observe the results on the 7-segment displays, which will show the output of the processor's computations.
