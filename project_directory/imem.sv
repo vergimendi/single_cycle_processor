@@ -5,7 +5,7 @@ module imem(input		logic[5:0]	a,
 	
 	initial
 		begin
-		$readmemh("C:/Users/Peter/Desktop/Quartus/Project/memfile.dat.back", RAM);
+			$readmemh("C:/Users/Vergil/Desktop/Quartus/Project/memfile.dat.back", RAM);
 		end
 		
 	assign rd = RAM[a]; // word aligned
